@@ -1,0 +1,227 @@
+$maincolor: #2a4cb2;
+$servecolor: #7d9be2;
+$basicfont:16px;
+
+*{
+    text-decoration: none;
+    list-style: none;
+}
+div p{
+    margin: 0;
+    margin-bottom: 0;
+}
+
+// .back{
+//     display: flex;
+// }
+
+.navbars{
+    width: 200px;
+    background-color: peachpuff;
+    color: salmon;
+    height: 100%;
+    padding: 25px;
+    position: fixed;
+    z-index: 3;
+    transition: all 1s;
+    transform: translateX(-100px);
+    h4{
+        text-align: right;
+    }
+    p{
+        text-align: left;
+    }
+}
+.navbars:hover {
+    transform: translateX(0px);
+    text-align: center;
+    h4{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+}
+
+.contents-wrap {
+    margin-left: 100px;
+}
+
+
+.box{
+    width: $maincolor;
+    font-size: $basicfont (+2px);
+}
+
+.background{
+    background-color: #7d9be2;
+    font-size: $basicfont -2px;
+}
+
+@keyframes twerking{
+    0%{ transform: rotate(0deg); }
+    25%{ transform: rotate(-50deg); }
+    // 50%{ transform: rotate(0deg); }
+    75%{ transform: rotate(50deg); }
+    100%{ transform: rotate(0deg);}
+}
+
+%btn{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+}
+
+.btn-rose{
+    @extend %btn;
+    background-color: palevioletred;
+}
+.btn-lemon{
+    @extend %btn;
+    background-color:palegoldenrod ;
+}
+.btn-leaf{
+    @extend %btn;
+    background-color: palegreen;
+}
+.btn-sky{
+    @extend %btn;
+    background-color: paleturquoise;
+}
+
+button:hover{
+    animation-name:twerking;
+    animation-duration: 1s;
+}
+
+@keyframes keyplus{
+    0%{ transform: rotate(0deg); }
+    50%{ transform: rotate(-180deg) scale(2); }
+    100%{ transform: rotate(0deg) scale(1);}
+}
+.plus{
+    background-color:mediumvioletred;
+    color: black;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plus:hover {
+    animation-name: keyplus;
+    animation-duration: 1s;
+    background-color: darkturquoise;
+}
+
+
+@mixin basic-box($color) {
+    padding: 10px;
+    border-radius: 15px;
+    color: $color;
+}
+
+.div-colored{
+    @include basic-box(rgb(89, 54, 29));
+    background-color: mintcream;
+
+
+    li{
+        padding: 5px;
+        border: 1px solid rgb(207, 218, 213);
+    }
+    li:active{
+        background-color: rgb(172, 234, 203);
+    }
+}
+
+@mixin alert-form($Acolor, $Bcolor) {
+    background-color: $Acolor;
+    color: $Bcolor;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.alert-well{
+    @include alert-form(rgb(198, 229, 178), rgb(47, 82, 43))
+}
+.alert-attention{
+    @include alert-form(rgb(174, 218, 237), rgb(16, 64, 98))
+}
+.alert-warning{
+    @include alert-form(rgb(246, 234, 185), rgb(97, 69, 4))
+}
+
+@mixin row-form ($num){
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    background-color:azure;
+    color: darkcyan;
+    border: 1px solid darkmagenta;
+    width: $num;
+
+    :hover{
+        background-color: yellowgreen;
+    }
+}
+.row .col-6{
+    @include row-form(50%);
+}
+.row .col-4{
+    @include row-form(33%);
+}
+
+.grid-prac {
+    display: grid;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.grid-prac img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.main-pic{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+
+.grey{
+    background-color: grey;
+    height: 2000px;
+    margin-top: 500px;
+}
+.image{
+    float: right;
+    width: 400px;
+    position: sticky;
+    top:100px;
+}
+.text{
+    float: left;
+    width: 300px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .grid-prac{
+        grid-template-columns: 200px;
+    }
+    .main-pic{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+}

@@ -1,0 +1,243 @@
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+div p {
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.navbars {
+  width: 200px;
+  background-color: peachpuff;
+  color: salmon;
+  height: 100%;
+  padding: 25px;
+  position: fixed;
+  z-index: 3;
+  transition: all 1s;
+  transform: translateX(-100px);
+}
+.navbars h4 {
+  text-align: right;
+}
+.navbars p {
+  text-align: left;
+}
+
+.navbars:hover {
+  transform: translateX(0px);
+  text-align: center;
+}
+.navbars:hover h4 {
+  text-align: center;
+}
+.navbars:hover p {
+  text-align: center;
+}
+
+.contents-wrap {
+  margin-left: 100px;
+}
+
+.box {
+  width: #2a4cb2;
+  font-size: 16px 2px;
+}
+
+.background {
+  background-color: #7d9be2;
+  font-size: 16px -2px;
+}
+
+@keyframes twerking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-50deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.btn-sky, .btn-leaf, .btn-lemon, .btn-rose {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+}
+
+.btn-rose {
+  background-color: palevioletred;
+}
+
+.btn-lemon {
+  background-color: palegoldenrod;
+}
+
+.btn-leaf {
+  background-color: palegreen;
+}
+
+.btn-sky {
+  background-color: paleturquoise;
+}
+
+button:hover {
+  animation-name: twerking;
+  animation-duration: 1s;
+}
+
+@keyframes keyplus {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg) scale(2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+.plus {
+  background-color: mediumvioletred;
+  color: black;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus:hover {
+  animation-name: keyplus;
+  animation-duration: 1s;
+  background-color: darkturquoise;
+}
+
+.div-colored {
+  padding: 10px;
+  border-radius: 15px;
+  color: rgb(89, 54, 29);
+  background-color: mintcream;
+}
+.div-colored li {
+  padding: 5px;
+  border: 1px solid rgb(207, 218, 213);
+}
+.div-colored li:active {
+  background-color: rgb(172, 234, 203);
+}
+
+.alert-well {
+  background-color: rgb(198, 229, 178);
+  color: rgb(47, 82, 43);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.alert-attention {
+  background-color: rgb(174, 218, 237);
+  color: rgb(16, 64, 98);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.alert-warning {
+  background-color: rgb(246, 234, 185);
+  color: rgb(97, 69, 4);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.row .col-6 {
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: azure;
+  color: darkcyan;
+  border: 1px solid darkmagenta;
+  width: 50%;
+}
+.row .col-6 :hover {
+  background-color: yellowgreen;
+}
+
+.row .col-4 {
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: azure;
+  color: darkcyan;
+  border: 1px solid darkmagenta;
+  width: 33%;
+}
+.row .col-4 :hover {
+  background-color: yellowgreen;
+}
+
+.grid-prac {
+  display: grid;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-prac img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.main-pic {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.grey {
+  background-color: grey;
+  height: 2000px;
+  margin-top: 500px;
+}
+
+.image {
+  float: right;
+  width: 400px;
+  position: sticky;
+  top: 100px;
+}
+
+.text {
+  float: left;
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-prac {
+    grid-template-columns: 200px;
+  }
+  .main-pic {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}/*# sourceMappingURL=text.css.map */
