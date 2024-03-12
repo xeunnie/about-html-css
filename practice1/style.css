@@ -1,32 +1,84 @@
-.black-bg{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 5;
-    /* 모달창 제작 시 포지션픽스랑 젵인덱스 넣기 */
+@charset "utf-8";
+
+body{
+    margin: 0;
+    background-color: #F2F2F2;
+}
+body h4, body p{
+    margin-bottom: 0;
+}
+
+.bg{
+    background-color:#64C3CA;
     padding: 30px;
-    visibility: hidden;
-    /* display: none; 대용 html에서 아예 숨기는 것 위는 모습만 숨기는 것*/
-    opacity: 0;
-    /* 아예 안보임 */
-    transition: all 1s;
+    width: 100%;
 }
 
-.show-modal{
-    visibility: visible;
-    /* display: block; 대용 */
-    opacity: 1;
-}
 
-.white-bg{
-    width: 300px;
-    height: 300px;
-    background-color: aliceblue;
-    border-radius: 20px;
+
+/* profile */
+.profile-box{
+    background-color:  #F2F2F2;
+    color: #64C3CA;
+    max-width: 1200px;
     padding: 20px;
 }
-
-.addedclass{
-    background-color: plum;
+.profile{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
+.gaps{
+    gap: 20px;
+}
+.profile span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #3ca5ad;
+}
+.profile-list{
+    padding: 20px;
+}
+.row {
+    justify-content:space-evenly ;
+}
+.butn{
+    background-color: #64C3CA;
+    color: #F2F2F2;
+}
+
+
+/* contents */
+
+.contents{
+    background-color: #F2F2F2;
+    color: #3ca5ad;
+    padding: 20px;
+}
+nav{
+    color: #F2F2F2;
+}
+.content-each{
+    background-color: #cde9eb;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 2px 1px #eee;
+}
+.abouts{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.skills{
+    background-color: #a1d7db;
+
+}
+.pages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*  */
